@@ -1,5 +1,6 @@
 import requests
 import json
+import os
 
 
 class UserPersonaGenerator:
@@ -17,7 +18,7 @@ class UserPersonaGenerator:
         })
         headers = {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer 00j7Q96xmLeOq7DkxX-Cu'
+            'Authorization': os.environ.get('BEARER_TOKEN')
         }
         response = requests.request("POST", url, headers=headers, data=payload)
         response_dict = response.json()

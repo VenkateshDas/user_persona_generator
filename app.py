@@ -14,6 +14,5 @@ comments = st.text_input("Comments", placeholder="Likes to play tennis and looki
 if st.button("Generate User Persona"):
     upg = UserPersonaGenerator()
     persona = upg.generate_persona(name, designation, comments)
-    st.write("Here is your user persona:")
     # display the generated user persona in a text box
-    st.text_area("", persona, height=500)
+    st.text_area("Here is your Generated Persona", persona, height=500)
